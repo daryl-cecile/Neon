@@ -1,0 +1,9 @@
+<element alias="atomic-search" xmlns:listen="http://www.w3.org/1999/xhtml">
+    <style file="searchbox.css"/>
+    <content>
+        <div>
+            <input type="text" expecting="placeholder" />
+            <button>search</button>
+        </div>
+    </content>
+</element>

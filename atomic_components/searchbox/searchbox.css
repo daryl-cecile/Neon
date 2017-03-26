@@ -1,0 +1,32 @@
+input, button{
+    border:none;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 0px;
+    box-sizing: border-box;
+    height:30px;
+}
+input{
+    color:white;
+    background:black;
+    line-height:30px;
+    flex: 9;
+}
+button{
+    flex: 3;
+}
+button:hover{
+    cursor:pointer;
+}
+*:focus{
+    outline:0 !important;
+}
+
+div{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    overflow: hidden;
+}

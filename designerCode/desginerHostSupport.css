@@ -1,0 +1,35 @@
+.selector{
+    outline:2px solid deepskyblue;
+    position: absolute;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.selector:after{
+    position: absolute;
+    content: attr(title);
+    background: deepskyblue;
+    color: white;
+    left: 0;
+    padding: 0 7px 4px 5px;
+}
+
+.marker{
+    outline:2px dashed rgba(0, 191, 255, 0.51);
+    position: absolute;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.marker:after{
+    position: absolute;
+    content: attr(title);
+    background: rgba(0, 191, 255, 0.51);
+    color: white;
+    left: 0;
+    padding: 0 7px 4px 5px;
+}
+
+.marker,.selector{
+    z-index: 99999;
+}

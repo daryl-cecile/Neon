@@ -1,0 +1,13 @@
+<element alias="atomic-unitbox">
+    <style file="unitbox.css"/>
+    <class src="unitbox.js"/>
+    <content>
+        <div>
+            <label>width</label>
+            <input type="text"/>
+            <button>%</button>
+            <div class="dropdown">
+            </div>
+        </div>
+    </content>
+</element>

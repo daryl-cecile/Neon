@@ -1,0 +1,113 @@
+input{
+    border:none;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+    height:28px;
+    color:white;
+    background:black;
+    line-height:30px;
+    text-align: center;
+    flex: 9;
+    min-width: 0;
+}
+
+input:not(:focus):hover{
+    cursor: pointer;
+}
+
+*:focus{
+    outline:0 !important;
+}
+
+div{
+    width:100%;
+    transition: all .4s;
+}
+
+div:not(.dropdown):not(.listItem){
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dropdown{
+    height:0;
+    transition:all .4s;
+    overflow: hidden;
+}
+
+.dropdown.max{
+    height:auto !important;
+    max-height: 130px;
+    overflow: hidden;
+    overflow-y: auto;
+    transition:all .4s;
+}
+
+.dropdown .listItem{
+    width:100%;
+    height:28px;
+    opacity: 0;
+    text-align: center;
+    transition: all .4s;
+}
+
+.dropdown.max .listItem{
+    opacity: 1;
+    transition: all .4s;
+}
+
+.dropdown p{
+    height:inherit;
+    margin:inherit;
+    text-align: center;
+    width:inherit;
+    line-height: 28px;
+    font-size: 11px;
+    padding: 0 15px 0 0;
+    pointer-events: none;
+}
+
+.dropdown.max .listItem:hover{
+    background: dimgray;
+    color:deepskyblue;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+div:not(.dropdown):not(.listItem):after { /* Little arrow */
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    pointer-events: none;
+    border-color: gainsboro transparent;
+}
+
+div.max:not(.dropdown):not(.listItem):after{
+    border-color: rgba(220, 220, 220, 0.47) transparent;
+}
+
+label{
+    flex: 4;
+    height: 28px;
+    line-height: 28px;
+    color: buttonface;
+    background: rgb(38,38,38);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid gainsboro;
+    transition: border-bottom .4s;
+}

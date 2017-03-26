@@ -1,0 +1,11 @@
+<element alias="atomic-color">
+    <class src="colorpicker.js" />
+    <style file="colorpicker.css"/>
+    <content>
+        <div>
+            <label>Color</label>
+            <input type="text"/>
+            <canvas id="myCanvas" width="220" height="200"/>
+        </div>
+    </content>
+</element>

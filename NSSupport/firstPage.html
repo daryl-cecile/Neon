@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body{
+            display: block;
+            height:100%;
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+        }
+        #fixedBG {
+            display: block;
+            height:100%;
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            opacity:0;
+            z-index: -12;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        #clip,#bob{
+            background: url("../assets/logo/bg.jpg") fixed;
+            background-size:cover;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            text-align: center;
+        }
+        #bob{
+            border: none;
+        }
+        section.clipContainer{
+            background: rgba(226, 226, 226, 0.7);
+            border-radius: 4px;
+        }
+        section.clipContainer.mouse{
+            padding: 5px 15px;
+        }
+        section.clipContainer.mouse:hover{
+            background: rgba(226, 226, 226, 0.9);
+            cursor: pointer;
+        }
+        section.clipContainer.mouse button:hover{
+            cursor: pointer;
+        }
+        section.clipContainer.mouse button:focus{
+            cursor: pointer;
+            outline:none;
+        }
+        section h3{
+            color:rgba(226, 226, 226, 0.7);
+            font-weight: 300;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width:100%;
+            height:85%;
+            left:0;
+            top:0;
+            position: absolute;
+            color:white;
+        }
+        section{
+            text-align: center;
+        }
+        nav {
+            height: 38px;
+            width:100%;
+            position: fixed;
+            background:transparent;
+            -webkit-app-region: drag;
+        }
+        section img{
+            width:20%;
+        }
+        section input[type="text"]{
+            font-size: 20px;
+            opacity: 1;
+            border:none;
+            background:gray;
+            width: 350px;
+            height:40px;
+        }
+        .loader {
+            border: 8px solid #292929; /* Light grey */
+            border-top: 8px solid #ff4969; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position:fixed;
+            display: inline-block;
+            left: calc(50% - 60px);
+            top: calc(50% - 60px);
+            z-index: 999999;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body onbeforeunload="me()">
+    <nav></nav>
+    <main>
+        <section><img src="../assets/logo/primary.png" alt=""></section>
+        <br>
+        <section><h3>Enter a project name to begin</h3></section>
+        <section class="clipContainer"><input onfocus="updateFocus(1)" onblur="updateFocus(0)" class="clip" id="clip" type="text"></section>
+        <br>
+        <section class="clipContainer mouse"><button id="bob" onclick="UPDATE_STATE()">CREATE</button></section>
+        <div class="loader"></div>
+    </main>
+
+    <script>
+        const electron = require('electron');
+        const ipcRenderer = electron.ipcRenderer;
+        const variables = {};
+        const remote = electron.remote;
+        const $ = require('jquery');
+
+        $.fn.animate = require('velocity-animate');
+
+        variables.set = function(name,val){
+            ipcRenderer.send('setValue', {
+                name:name,
+                value:val
+            });
+        };
+        variables.get = function(name){
+            return ipcRenderer.sendSync('getValue',name);
+        };
+
+        function updateFocus(n){
+            if (n==1){
+                document.querySelector('section.clipContainer:not(.mouse)').style.boxShadow = "0 0 0 1px deepskyblue";
+            }
+            else{
+                document.querySelector('section.clipContainer:not(.mouse)').style.boxShadow = "0 0 0 1px transparent";
+            }
+        }
+
+        function UPDATE_STATE(){
+            let inputContent = document.querySelector('#clip').value;
+            let complete = (inputContent.length >= 3 && /[a-zA-Z0-9]+/.test(inputContent));
+            let msg = (complete==true?'done':'x');
+            variables.set('PRC',msg);
+            variables.set('projectName',inputContent);
+            if (complete == false){
+                remote.dialog.showMessageBox(remote.getCurrentWindow(),{
+                    type:"error",
+                    buttons:['Okay'],
+                    defaultId:0,
+                    message:'Invalid project name',
+                    detail:'Your project name must not contain any illegal characters and must be between 3 and 15 characters',
+                    icon: remote.nativeImage.createFromPath('../assets/logo/primary.png')
+                });
+            }
+            else{
+                new Notification('Neon Studio', {
+                    body: 'Creating project directory for '+inputContent,
+                    icon: '../assets/logo/primary.png',
+                    badge: '../assets/logo/primary.png'
+                });
+                remote.getCurrentWindow().close();
+            }
+        }
+
+        function me(){
+            variables.set('CMD','open');
+        }
+
+        let b = $('<img/>');
+        $('section').css({opacity:0});
+        b.on('load',function(){
+            let component = $('<div id="fixedBG"></div>');
+            component.css({
+                backgroundImage:'url(../assets/logo/bg.jpg)'
+            });
+            $('body').append(component);
+            setTimeout(function(){
+                component.animate({
+                    opacity:1
+                },1000);
+                $('.loader').animate({opacity:0},1000,function(){
+                    $(this).remove();
+                    $("section").each(function(index) {
+                        $(this).delay(400*index).animate({opacity:1},300);
+                    });
+                });
+            },1000);
+        });
+        b.attr('src',"../assets/logo/bg.jpg");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "neonStudio",
+  "version": "3.1.0",
+  "description": "Web Development Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . 'Neon Studio' --darwin --icon 'assets/logo/primary.icns'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darcectech/Neon.git"
+  },
+  "author": "Daryl Cecile",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darcectech/Neon/issues"
+  },
+  "homepage": "https://github.com/darcectech/Neon#readme",
+  "devDependencies": {
+    "ace": "^1.3.0",
+    "diff-dom": "^2.1.0",
+    "electron": "^1.6.1",
+    "electron-context-menu": "^0.8.0",
+    "jquery": "latest",
+    "nativejsx": "^4.0.0",
+    "node-cordova": "^1.1.0",
+    "ping": "^0.2.2",
+    "unsplash-source-js": "^1.0.0",
+    "velocity": "^0.7.2",
+    "velocity-animate": "^1.4.3"
+  }
+}

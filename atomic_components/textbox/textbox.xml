@@ -1,0 +1,12 @@
+<element alias="atomic-textbox">
+    <style file="textbox.css"/>
+    <class src="textbox.js"/>
+    <content>
+        <div>
+            <label></label>
+            <input type="text"/>
+            <p class="icon">search</p>
+            <div class="dropdown"></div>
+        </div>
+    </content>
+</element>

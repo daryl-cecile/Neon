@@ -1,0 +1,12 @@
+<element alias="atomic-numberbox">
+    <style file="numberbox.css"/>
+    <res file="dependencies/css/Material_Icons.css" type="stylesheet"/>
+    <class src="numberbox.js"/>
+    <content>
+        <div>
+            <label></label>
+            <input type="text"/>
+            <span><i class="material-icons">swap_vert</i></span>
+        </div>
+    </content>
+</element>

@@ -1,0 +1,9 @@
+<element alias="atomic-inputbox">
+    <style file="inputbox.css"/>
+    <content>
+        <div>
+            <label></label>
+            <input type="text"/>
+        </div>
+    </content>
+</element>

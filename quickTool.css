@@ -1,0 +1,41 @@
+body{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    margin:0;
+    box-sizing: border-box;
+    -webkit-app-region: drag;
+}
+
+html, body{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+body *{
+    -webkit-app-region: no-drag;
+    box-sizing: border-box;
+}
+
+input,.mimic{
+    height: 70px;
+    line-height: 70px;
+    margin: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-left: 15px;
+    border: 0 solid transparent;
+    outline: none !important;
+    width: calc(100% - 10px) !important;
+    background: transparent;
+    font-size: 30px;
+    color: white;
+    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.mimic{
+    color: rgba(255,255,255,0.5);
+    pointer-events: none;
+    z-index: -1;
+}

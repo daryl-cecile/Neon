@@ -1,0 +1,104 @@
+/**
+ * Created by darylcecile on 07/02/2017.
+ */
+
+ace.define("ace/theme/neonmax",["require","exports","module","ace/lib/dom"],function(require, exports, module) {
+
+    exports.isDark = false;
+    exports.cssClass = "ace-monokai";
+    exports.cssText = ".ace-monokai .ace_gutter {\
+background: #424241;\
+color: #8F908A\
+}\
+.ace-monokai .ace_print-margin {\
+width: 1px;\
+background: #555651\
+}\
+.ace-monokai {\
+background-color: #424241;\
+color: #F8F8F2\
+}\
+.ace-monokai .ace_cursor {\
+color: #F8F8F0\
+}\
+.ace-monokai .ace_marker-layer .ace_selection {\
+background: rgba(255, 255, 255, 0.42) \
+}\
+\
+.ace-monokai .ace_marker-layer .ace_step {\
+background: rgba(198, 198, 198,.5);\
+}\
+\
+.ace-monokai .ace_marker-layer .ace_active-line {\
+background: #3E3D32\
+}\
+.ace-monokai .ace_gutter-active-line {\
+background-color: #3E3D32\
+}\
+.ace-monokai .ace_marker-layer .ace_selected-word {\
+border: 1px solid #49483E\
+}\
+.ace-monokai .ace_invisible {\
+color: #3B3A32\
+}\
+.ace-monokai .ace_entity.ace_name.ace_tag,\
+.ace-monokai .ace_keyword,\
+.ace-monokai .ace_meta.ace_tag,\
+.ace-monokai .ace_storage {\
+color: #F92672\
+}\
+.ace-monokai .ace_punctuation,\
+.ace-monokai .ace_punctuation.ace_tag {\
+color: #ABABAB\
+}\
+.ace-monokai .ace_constant.ace_character,\
+.ace-monokai .ace_constant.ace_language,\
+.ace-monokai .ace_constant.ace_numeric,\
+.ace-monokai .ace_constant.ace_other {\
+color: #F9FF7F\
+}\
+.ace-monokai .ace_invalid {\
+color: #F8F8F0;\
+background-color: #F92672\
+}\
+.ace-monokai .ace_invalid.ace_deprecated {\
+color: #F8F8F0;\
+background-color: #AE81FF\
+}\
+.ace-monokai .ace_support.ace_constant,\
+.ace-monokai .ace_support.ace_function {\
+color: #66D9EF\
+}\
+.ace-monokai .ace_fold {\
+background-color: #A6E22E;\
+border-color: #F8F8F2\
+}\
+.ace-monokai .ace_storage.ace_type,\
+.ace-monokai .ace_support.ace_class,\
+.ace-monokai .ace_support.ace_type {\
+font-style: italic;\
+color: #66D9EF\
+}\
+.ace-monokai .ace_entity.ace_name.ace_function,\
+.ace-monokai .ace_entity.ace_other,\
+.ace-monokai .ace_entity.ace_other.ace_attribute-name,\
+.ace-monokai .ace_variable {\
+color: #9cef04 \
+}\
+.ace-monokai .ace_variable.ace_parameter {\
+font-style: italic;\
+color: #FFD4B0\
+}\
+.ace-monokai .ace_string {\
+color: #FAF27D\
+}\
+.ace-monokai .ace_comment {\
+color: #7D7D7D\
+}\
+.ace-monokai .ace_indent-guide {\
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y\
+}";
+
+    var dom = require("../lib/dom");
+    dom.importCssString(exports.cssText, exports.cssClass);
+});

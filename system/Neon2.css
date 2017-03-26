@@ -1,0 +1,88 @@
+h1 {
+    width:100%;
+    text-align: center;
+    font-size: 57px;
+    margin-bottom: -17px;
+    font-weight: 300 !important;
+    font-family: 'Roboto' !important;
+    margin-top: 22px;
+    animation: neonGlow 3s linear 0s infinite alternate;
+    overflow: visible;
+    pointer-events: none;
+}
+
+h2{
+    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: 31px;
+    margin-top: 32px;
+    margin-bottom: -9px;
+    color: deeppink;
+}
+
+section{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section.done, section.done+section:not(.done)+section, section:not(.done)+section{
+    height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: all .5s;
+}
+
+main{
+    width:100%;
+    height:calc(100% - 80px - 150px);
+    overflow-y: hidden;
+}
+
+[big]{
+    display: block;
+    width:80%;
+    font-size: 24px !important;
+    text-align: center;
+    font-weight: 300;
+    border: 1px solid dimgray !important;
+}
+
+.neon-bottom{
+    position: absolute;
+    bottom: 50px;
+    left:calc(50% - 24px);
+}
+
+.neonOption--img{
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    border:1px solid transparent;
+}
+
+.neonOption--img:hover{
+    background: gainsboro;
+    border:1px solid deepskyblue;
+    border-radius: 12px;
+    transition: all .3s;
+}
+
+.neonOption--img.active{
+    border: 1px solid deeppink;
+    border-radius: 12px;
+}
+
+.neonLabel:not(:empty){
+    background:gray;
+    color:white;
+    opacity: 0.7;
+    font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    padding:3px 7px;
+    border-radius: 3px;
+}

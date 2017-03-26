@@ -1,0 +1,35 @@
+<element alias="atomic-drop">
+    <style file="dropdown.css"/>
+    <css-rule select="$root li a">
+        display: block;
+        text-decoration: none;
+        color: #333;
+        padding: 3px 0;
+        transition: all 0.3s ease-out;
+        border-bottom: 1px solid #e6e8ea;
+    </css-rule>
+    <css-rule select="$root li:hover a">
+        color: #57a9d9;
+    </css-rule>
+    <css-rule select="$root li i">
+        margin-right: 5px;
+        color: inherit;
+        vertical-align: middle;
+    </css-rule>
+    <css-rule select="li:last-of-type a">
+        border:none;
+    </css-rule>
+    <css-rule select="$root li">
+        padding: 0 10px ;
+    </css-rule>
+    <css-rule select="$root">
+        margin-top:50px;
+    </css-rule>
+    <content>
+        <div id="dd" onclick="$(this).toggleClass('active');" class="wrapper-dropdown-5" tabindex="1">John Doe
+            <ul class="dropdown">
+                <slot></slot>
+            </ul>
+        </div>
+    </content>
+</element>

@@ -1,0 +1,35 @@
+.cm-s-neonMax {
+	background: #383838;
+	color: #F8F8F2;
+}
+.cm-s-neonMax .CodeMirror-activeline-background {
+	background: #3E3D32;
+}
+.cm-s-neonMax .CodeMirror-selected {
+	background: #49483E;
+}
+.cm-s-neonMax .cm-comment {
+	color: #7D7D7D;
+}
+.cm-s-neonMax .cm-string {
+	color: #FAF27D;
+}
+.cm-s-neonMax .cm-number {
+	color: #F9FF7F;
+}
+.cm-s-neonMax .cm-atom {
+	color: #FFECA1;
+}
+.cm-s-neonMax .cm-keyword {
+	color: #23BDFA;
+}
+.cm-s-neonMax .cm-variable {
+	color: #F79240;
+}
+.cm-s-neonMax .cm-def {
+	font-style: italic;
+	color: #D5B5FF;
+}
+.cm-s-neonMax .cm-property {
+	color: #B5A3FF;
+}

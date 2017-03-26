@@ -1,0 +1,11 @@
+<element alias="atomic-range">
+    <style file="range.css"/>
+    <class src="range.js"/>
+    <content>
+        <div>
+            <label></label>
+            <input type="text"/>
+            <input type="range"/>
+        </div>
+    </content>
+</element>

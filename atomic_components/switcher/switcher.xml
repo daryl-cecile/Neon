@@ -1,0 +1,14 @@
+<element alias="atomic-switcher">
+    <style file="switcher.css"/>
+    <class src="switcher.js"></class>
+    <content>
+        <div>
+            <label class="switch">
+                <p id="name"></p>
+                <p></p>
+                <input type="checkbox"/>
+                <div class="slider"/>
+            </label>
+        </div>
+    </content>
+</element>

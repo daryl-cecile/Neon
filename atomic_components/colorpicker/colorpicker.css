@@ -1,0 +1,47 @@
+div{
+    background:black;
+    border-radius: 5px ;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+}
+
+div:not(.active){
+    height:30px !important;
+}
+
+div.active{
+    height:230px !important;
+}
+
+div canvas:hover{
+    cursor: crosshair;
+}
+
+input{
+    height: 28px;
+    line-height: 28px;
+    width: 70%;
+    color: white;
+    background: black;
+    border: 1px solid transparent;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+label{
+    width: 30%;
+    margin-right: -5px;
+    height: 28px;
+    line-height: 28px;
+    color: buttonface;
+    background: rgb(38,38,38);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid gainsboro;
+}
+
+input:focus{
+    outline:none;
+}

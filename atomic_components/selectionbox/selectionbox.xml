@@ -1,0 +1,12 @@
+<element alias="atomic-selectionbox">
+    <style file="selectionbox.css"/>
+    <class src="selectionbox.js"/>
+    <content>
+        <div>
+            <label>width</label>
+            <input type="text"/>
+            <div class="dropdown">
+            </div>
+        </div>
+    </content>
+</element>

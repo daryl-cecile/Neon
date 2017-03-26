@@ -1,0 +1,87 @@
+.switch div:not(.slider){
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+}
+
+.switch{
+    width:100%;
+    display: block;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    vertical-align: middle;
+    height: 28px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #cc4b57;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+
+    background-color: #35b282;
+}
+
+div:not(.slider){
+    background:black;
+    border-radius: 5px ;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+    height: 30px !important;
+}
+
+p:first-child{
+    width: 30%;
+    margin: 0 -5px 0 0;
+    height: 28px;
+    line-height: 28px;
+    color: buttonface;
+    background: rgb(38,38,38);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid gainsboro;
+}
+
+p:not(:first-child){
+    width: calc(70% - 58px);
+    margin: 0 -5px 0 0;
+    height: 28px;
+    line-height: 28px;
+    color: buttonface;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    border-right: 1px solid gainsboro;
+}
