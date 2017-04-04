@@ -1,18 +1,3 @@
-
-creator.controls.core['Label'] = (function() {
-    return {
-        icon:'label',
-        name:'label',
-        data:{
-            control:'Label',
-            properties:[]
-        },
-        accepts:[],
-        styles:['width','height','color'],
-        build:function(){
-            return (
-                <label d="true" e="label">I am a label</label>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc4f3d7bff99bc771060a820e62eb91cf61cdc362ef6f9b9497286878625a1af
+size 405

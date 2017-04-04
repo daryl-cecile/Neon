@@ -1,17 +1,3 @@
-creator.controls.core['Input'] = (function() {
-    return {
-        icon:'input',
-        name:'input',
-        data:{
-            control:'Input',
-            properties:[]
-        },
-        accepts:[],
-        styles:[],
-        build:function(){
-            return (
-                <input type="text" d="true" e="input" placeholder="type in me"/>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:91c39ae12b176a512d91dd076389ffb70f27199a32001eadeb2a78e9f9211633
+size 468

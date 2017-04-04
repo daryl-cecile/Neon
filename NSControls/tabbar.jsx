@@ -1,26 +1,3 @@
-
-
-creator.controls.core['TabBar'] = (function() {
-    return {
-        icon:'tabBar',
-        name:'tabbar',
-        data:{
-            control:'TabBar',
-            properties:[]
-        },
-        accepts:[],
-        styles:[],
-        build:function(){
-            return (
-                <div d="true" e="toolbar" class="toolbar">
-                    <div d="false" e="container" class="toolbar-inner" c="true">
-                        <a d="true" e="link" href="#" class="link">Link 1</a>
-                        <a d="true" e="link" href="#" class="link">Link 2</a>
-                        <a d="true" e="link" href="#" class="link">Link 3</a>
-                        <a d="true" e="link" href="#" class="link">Link 4</a>
-                    </div>
-                </div>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a5e5f8c6372e974f42369d0e4d5e53bd0a227bea0f448cd5824197596cc30ac
+size 1135

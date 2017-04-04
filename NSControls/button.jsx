@@ -1,19 +1,3 @@
-
-
-creator.controls.core['Button'] = (function() {
-    return {
-        icon:'button',
-        name:'button',
-        data:{
-            control:'Button',
-            properties:[]
-        },
-        accepts:[],
-        styles:['width','height','font','background','color','border','borderRadius'],
-        build:function(){
-            return (
-                <button e="button" d="true">Button</button>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:3049af453867fe6af3a25fffdee64fc251ee4d8a1c5227849c3ca1da99ecd20b
+size 903

@@ -1,21 +1,3 @@
-
-
-
-creator.controls.core['Image'] = (function() {
-    return {
-        icon:'image',
-        name:'image',
-        data:{
-            control:'Image',
-            properties:[]
-        },
-        accepts:[],
-        styles:['width','height','background','color','margin'],
-        build:function(){
-            return (
-                <img d="true" e="image" src="rand#09"/>
-            )
-        }
-    };
-})();
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a676a525f7cab6eed6244a743abde3cf14eb92aa214160556060dda09ee38711
+size 401

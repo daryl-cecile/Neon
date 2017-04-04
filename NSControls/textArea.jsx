@@ -1,20 +1,3 @@
-
-
-
-creator.controls.core['TextArea'] = (function() {
-    return {
-        icon:'textArea',
-        name:'textArea',
-        data:{
-            control:'TextArea',
-            properties:[]
-        },
-        accepts:[],
-        styles:[],
-        build:function(){
-            return (
-                <input type="text" d="true" e="textArea" name="text_element" placeholder="type in me"/>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:4620ea0bee1ad48158d5bd4acf56bc2a00367d79d165c1057d99e0fa1db5db98
+size 426

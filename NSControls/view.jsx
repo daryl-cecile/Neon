@@ -1,27 +1,3 @@
-
-creator.controls.core['View'] = (function() {
-    return {
-        icon:'view',
-        name:'view',
-        data:{
-            control:'View',
-            properties:[]
-        },
-        accepts:[],
-        styles:[],
-        parentFit:['.views'],
-        build:function(){
-            return (
-                <div d="true" e="view" class="view">
-                    <div className="pages" d="false">
-                        <div className="page" d="false">
-                            <div class="page-content" d="false" c="true">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )
-        }
-    };
-})();
+version https://git-lfs.github.com/spec/v1
+oid sha256:d1d01f25b5faa52eac7c5f7da36ada13c40dfba04fd302bcd87935e095bd96b8
+size 383
